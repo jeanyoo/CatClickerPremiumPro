@@ -116,7 +116,7 @@ var adminView = {
     this.adminSaveElem = document.getElementById('save-button');
     this.adminCancelElem = document.getElementById('cancel-button');
     this.adminDataElem = document.getElementById('admindata');
-    this.adminNameElem = document.getElementById('admin-name');
+
     this.adminUrlElem = document.getElementById('admin-url');
     this.adminClicksElem = document.getElementById('admin-count');
 
@@ -135,9 +135,9 @@ var adminView = {
 
     this.adminSaveElem.addEventListener('click', function(){
       event.preventDefault();  //don't submit form data
-      var nameElem = this.adminNameElem.value;
-      var pathElem = this.adminUrlElem.value;
-      var clickElem = this.adminClicksElem.value;
+      var nameElem = document.getElementById('admin-name').value;
+      var pathElem = document.getElementById('admin-url').value;
+      var clickElem = document.getElementById('admin-count').value;
       var currentCat = octopus.getCurrentCat();
       currentCat.name = nameElem;
       currentCat.imgSrc = pathElem;
